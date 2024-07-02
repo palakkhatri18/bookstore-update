@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  padding-left: 8rem;
+  padding-right: 8rem;
+  justify-content: space-around;
+  margin: 0 -10px;
+}
+
+.column {
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 20px;
+  background-color: #f0f0f1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 20rem; /* Smaller width */
+  height: auto; /* Adjust height to content */
+  position: relative;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 20px 20px 0 0; /* Rounded corners at the top */
+}
+
+.card-content {
+  z-index: 2; /* Ensure content is above the overlay */
+  position: relative;
+  padding: 16px;
+  background: #fff; /* White background for text area */
+  border-radius: 0 0 20px 20px; /* Rounded corners at the bottom */
+}
+
+.container p {
+  text-align: justify; /* Justify text */
+}
+
+/* Style for the price */
+.container h4 {
+  margin: 10px 0;
+  font-size: 1em; /* Smaller font size for price */
+  color: #ff5722; /* Adjust this color to suit your design */
+}
+
+/* Hover neon effect */
+.card:hover {
+  box-shadow: 0 0 20px 4px rgba(0, 255, 255, 0.8);
+  transform: translateY(-10px);
+}
+
+/* Button styles */
+button {
+  font-family: "Montserrat", sans-serif;
+  background-color: #6200ea;
+  color: white;
+  border: none;
+  padding: 8px 16px; /* Smaller padding */
+  margin-top: 10px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+  background-color: #3700b3;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(55, 0, 179, 0.5);
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media (max-width: 500px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
