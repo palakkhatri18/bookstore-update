@@ -1,0 +1,58 @@
+.contain {
+    margin: 20px 2rem;
+}
+
+.head {
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.sub-head {
+    font-size: 1.7rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: rgb(61, 60, 60);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+img{
+    width: 25rem;
+    height: 25rem;
+}
+/* Ensure even spacing between columns */
+.row > .col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth{
+    font-size: 1.5rem;
+}
+.card {
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .head {
+        font-size: 2.5rem;
+    }
+    .sub-head {
+        font-size: 1.5rem;
+    }
+    .description {
+        font-size: 1rem;
+    }
+    .btn-primary {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+    .auth{
+        font-size: 1rem;
+    }
+}

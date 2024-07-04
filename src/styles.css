@@ -27,49 +27,66 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  max-width: 20rem; /* Smaller width */
-  height: auto; /* Adjust height to content */
+  max-width: 20rem;
+  height: 100%;
   position: relative;
   overflow: hidden;
 }
 
 .card img {
   width: 100%;
-  border-radius: 20px 20px 0 0; /* Rounded corners at the top */
+  height: auto;
+  border-radius: 20px 20px 0 0;
 }
 
-.card-content {
-  z-index: 2; /* Ensure content is above the overlay */
-  position: relative;
+.card .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
   padding: 16px;
-  background: #fff; /* White background for text area */
-  border-radius: 0 0 20px 20px; /* Rounded corners at the bottom */
+  background: #fff;
+  border-radius: 0 0 20px 20px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card h5,
+.card h3,
+.card p,
+.card h4 {
+  margin: 8px 0;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container p {
-  text-align: justify; /* Justify text */
+  text-align: justify;
 }
 
-/* Style for the price */
 .container h4 {
   margin: 10px 0;
-  font-size: 1em; /* Smaller font size for price */
-  color: #ff5722; /* Adjust this color to suit your design */
+  font-size: 1em;
+  color: #ff5722;
 }
 
-/* Hover neon effect */
 .card:hover {
-  box-shadow: 0 0 20px 4px rgba(0, 255, 255, 0.8);
+  box-shadow: 0 0 20px 4px rgba(255, 251, 0, 0.8);
   transform: translateY(-10px);
 }
 
-/* Button styles */
 button {
   font-family: "Montserrat", sans-serif;
   background-color: #6200ea;
   color: white;
   border: none;
-  padding: 8px 16px; /* Smaller padding */
+  padding: 8px 16px;
   margin-top: 10px;
   border-radius: 25px;
   cursor: pointer;
@@ -82,8 +99,7 @@ button:hover {
   box-shadow: 0 0 10px rgba(55, 0, 179, 0.5);
 }
 
-/* Responsive columns - one column layout (vertical) on small screens */
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   .row {
     flex-direction: column;
     align-items: center;
