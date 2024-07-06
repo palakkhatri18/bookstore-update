@@ -1,18 +1,52 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Navbar.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const toggleNavbar = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleLogoClick = () => {
+    navigate('/');
+  };
+
   return (
-    <nav className="navbar" style={{ backgroundImage: 'url(https://static.vecteezy.com/system/resources/previews/005/587/780/non_2x/realistic-border-of-melted-butter-or-ghee-for-food-packaging-design-stock-realistic-border-of-melted-cheese-or-cheese-fondue-on-a-white-background-free-vector.jpg  ) ' }}>
-      <div className="navbar-logo">THE STILTONS</div>
-      <ul className="navbar-links">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/books">Books</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
-      </ul>
-    </nav>
+    <>
+    <div className='navbar'>
+    
+
+
+        <div className="navbar-logo" onClick={handleLogoClick}>
+          <img 
+            src="https://www.scholastic.ca/geronimostilton/img/header-geronimo-books.png" 
+            alt="Geronimo Stilton Logo"
+          />
+        </div>
+
+        <nav className="navbar-ab">
+              <div className="navbar-title">THE STILTONS</div>
+        
+        <ul className={`navbar-links ${isOpen ? 'active' : ''}`}>
+          <li><Link to="/" onClick={toggleNavbar}>Home</Link></li>
+          <li><Link to="/books" onClick={toggleNavbar}>Books</Link></li>
+          <li><Link to="/about" onClick={toggleNavbar}>About</Link></li>
+          <li><Link to="/contact" onClick={toggleNavbar}>Contact</Link></li>
+        </ul>
+        <div className="hamburger" onClick={toggleNavbar}>
+          <div className="line1"></div>
+          <div className="line2"></div>
+          <div className="line3"></div>
+        </div>
+
+      </nav>
+      </div>
+   
+    <div className='navbar-spacer'></div>
+    </>
   );
 };
 

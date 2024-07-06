@@ -11,6 +11,9 @@ export default function Card(props) {
           <p>{props.p1}</p>
           <h4>{props.price}</h4>
           {props.children}
+        <a href = {props.link}>
+        <button>View More</button>
+      </a>
         </div>
       </div>
     </div>

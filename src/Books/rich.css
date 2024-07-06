@@ -1,16 +1,18 @@
 .contain {
-    margin: 20px 2rem;
+    margin-top: 2rem;
 }
 
 .head {
     font-size: 3.5rem;
     font-weight: 600;
+    text-align: center;
 }
 
 .sub-head {
     font-size: 1.7rem;
     font-weight: 400;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .description {
@@ -18,27 +20,44 @@
     font-size: 1.2rem;
     line-height: 1.6;
     margin-bottom: 10px;
+    text-align: justify;
 }
 
-img{
-    width: 25rem;
-    height: 25rem;
+img {
+    width: 100%;
+    height: auto;
+    max-width: 30rem;
+
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+
 }
 /* Ensure even spacing between columns */
 .row > .col {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
-.auth{
+.auth {
     font-size: 1.5rem;
 }
-.card {
-    width: 100%;
+
+.cardnew{
+    top:50%;
+    transform: translateY(20%);
+    background-color: white;
 }
 
+
+
+/* Add media queries for responsive design */
 @media screen and (max-width: 768px) {
+    .row{
+        flex-direction: column;
+    }
     .head {
         font-size: 2.5rem;
     }
@@ -52,7 +71,8 @@ img{
         font-size: 0.9rem;
         padding: 8px 16px;
     }
-    .auth{
+    .auth {
         font-size: 1rem;
     }
+  
 }

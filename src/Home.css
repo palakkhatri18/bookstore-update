@@ -4,10 +4,16 @@ body {
   margin: 0;
   padding: 0;
   background-image: url('https://static.vecteezy.com/system/resources/previews/005/587/780/non_2x/realistic-border-of-melted-butter-or-ghee-for-food-packaging-design-stock-realistic-border-of-melted-cheese-or-cheese-fondue-on-a-white-background-free-vector.jpg');
-  background-size: cover; /* Scale the background image to cover the entire body */
-  background-position: center; /* Center the background image */
-  font-family: Arial, sans-serif; /* Specify a fallback font */
-  height: 100vh; /* Ensure the body takes up the full viewport height */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  /* Scale the background image to cover the entire body */
+  background-position: center;
+  /* Center the background image */
+  font-family: Arial, sans-serif;
+  /* Specify a fallback font */
+  height: 100vh;
+  /* Ensure the body takes up the full viewport height */
 }
 
 .home {
@@ -15,43 +21,54 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   padding: 20px;
+  margin-top: -40px;
 }
 
 .home-cards {
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px; /* Add gap between cards */
+  gap: 20px;
+  /* Add gap between cards */
 }
 
 .home-card {
-  width: 300px; /* Adjust card width for smaller screens */
-  height: 350px; /* Adjust card height for smaller screens */
+  width: 300px;
+  /* Adjust card width for smaller screens */
+  height: 350px;
+  /* Adjust card height for smaller screens */
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Align items with space in-between */
-  align-items: center; /* Center content horizontally */
-  padding: 20px; /* Add padding inside the card */
-  transition: transform 0.3s ease; /* Add smooth transition */
+  justify-content: space-between;
+  /* Align items with space in-between */
+  align-items: center;
+  /* Center content horizontally */
+  padding: 20px;
+  /* Add padding inside the card */
+  transition: transform 0.3s ease;
+  /* Add smooth transition */
   border-radius: 120%;
 }
 
 .home-card img {
-  width: 100%; /* Ensure the image fills the entire card */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%;
+  /* Ensure the image fills the entire card */
+  height: auto;
+  /* Maintain aspect ratio */
   object-fit: cover;
-   /* Cover the entire area of the card */
-   /* position: relative;
+  /* Cover the entire area of the card */
+  /* position: relative;
    top: 30px; */
 }
 
 .welcome-heading {
   text-align: center;
-  margin-top: 20px; /* Adjust top margin for spacing */
+  margin-top: 20px;
+  /* Adjust top margin for spacing */
 }
 
 .welcome-heading h1 {
@@ -60,28 +77,36 @@ body {
   font-weight: bold;
   color: #ffffff;
   text-shadow: 2px 2px 4px rgb(63, 63, 63);
-  margin: 0; /* Remove default margin for <h1> */
+  margin: 0;
+  /* Remove default margin for <h1> */
 }
 
 .home-card:hover {
-  transform: scale(1.05); /* Scale up the card on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  transform: scale(1.05);
+  /* Scale up the card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /* Add shadow on hover */
 }
 
 @media (max-width: 768px) {
   .home-card {
-    width: 250px; /* Adjust card width for medium screens */
-    height: 320px; /* Adjust card height for medium screens */
+    width: 250px;
+    /* Adjust card width for medium screens */
+    height: 320px;
+    /* Adjust card height for medium screens */
   }
 }
 
 @media (max-width: 480px) {
   .home-card {
-    width: 200px; /* Adjust card width for smaller screens */
-    height: 280px; /* Adjust card height for smaller screens */
+    width: 200px;
+    /* Adjust card width for smaller screens */
+    height: 280px;
+    /* Adjust card height for smaller screens */
   }
 
   .welcome-heading h1 {
-    font-size: 40px; /* Adjust font size for smaller screens */
+    font-size: 40px;
+    /* Adjust font size for smaller screens */
   }
 }

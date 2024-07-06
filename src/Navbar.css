@@ -2,22 +2,37 @@
 
 .navbar {
   display: flex;
-  justify-content: center; /* Center the navbar */
   align-items: center;
-  background-color: #333;
+  justify-content: space-between; /* Ensure logo is left, title is centered, links are right */
+  background-color: transparent;
   padding: 10px 20px;
   font-family: "Montserrat", sans-serif;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: webkit-sticky; /* Make the navbar sticky */
+  text-shadow: 2px 2px 4px rgb(63, 67, 67);
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 1000;
 }
 
+.navbar-ab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
 .navbar-logo {
+  cursor: pointer;
+}
+
+.navbar-logo img {
+  height: 60px; /* Adjust the height as needed */
+}
+
+.navbar-title {
   font-size: 1.5rem;
   color: white;
   font-weight: bold;
-  margin-right: auto; /* Push links to the center */
 }
 
 .navbar-links {
@@ -25,14 +40,18 @@
   display: flex;
   margin: 0;
   padding: 0;
+  font-weight: 700;
+  color: white;
 }
 
 .navbar-links li {
+  margin-left: 200px;
   margin: 0 15px;
 }
 
 .navbar-links a {
   text-decoration: none;
+
   color: white;
   font-size: 1rem;
   transition: color 0.3s, border-bottom 0.3s;
@@ -40,6 +59,43 @@
 }
 
 .navbar-links a:hover {
-  color: #ffeb3b;
-  border-bottom: 2px solid #ffeb3b; /* Add border-bottom on hover */
+  color: red;
+  border-bottom: 2px solid red;
+  text-shadow: none;
 }
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px;
+  transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Spacer div to create margin below the fixed navbar */
+.navbar-spacer {
+  height: 70px; /* Adjust the height as needed */
+}
+

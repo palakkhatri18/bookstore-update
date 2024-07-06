@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import bookData from './BookDetail';
+
 import './rich.css';
-import { loadStripe } from '@stripe/stripe-js';
-import {Elements} from '@stripe/react-stripe-js'
-import ReactDOM from 'react-dom'
-import CheckoutForm from './Checkoutform';
+
 
 const ViewBook = () => {
   const { bookId } = useParams();
@@ -31,8 +29,8 @@ const ViewBook = () => {
 
   return (
     <div className="contain">
-      <div className="row align-items-center">
-        <div className="col-lg-3 col-md-4 col-12 mb-3 d-flex justify-content-center">
+      <div className="row">
+        <div className="col-1">
           <img src={book.url} alt={book.title} className="img-fluid" />
         </div>
         <div className="col-lg-6 col-md-8 col-12 mb-3 text-justify">
@@ -43,9 +41,9 @@ const ViewBook = () => {
           <hr />
           <p className="description">{book.description}</p>
         </div>
-        <div className="col-lg-3 col-md-4 col-12 mb-3 d-flex justify-content-center">
-          <div className="card">
-            <h3 className="card-header">Buy Now</h3>
+        <div className="col">
+          <div className="cardnew">
+
             <div className="card-body">
               <h5 className="card-title">PaperBack: {book.price}</h5>
               <p className="card-text">Inclusive of All taxes</p>
@@ -68,7 +66,6 @@ const ViewBook = () => {
               <button type='button' className="btn btn-primary mt-3 ms-2">
                 Buy Now
               </button>
-
             </div>
           </div>
         </div>
